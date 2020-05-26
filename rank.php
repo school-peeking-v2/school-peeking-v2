@@ -74,11 +74,11 @@
 
     <div class="invent-section text-center">
         <div class="inven">
-            <h1 class="inven-title">정답자 명단</h1>
+            <h1 class="inven-title">랭킹</h1>
         </div>
         <div class="container">
             <div class="col-sm">
-                <p class="inven-inst" id="inven-inst">퀴즈의 정답을 맞춘 사람을 확인하세요!</p>
+                <p class="inven-inst" id="inven-inst">퀴즈 전체 랭킹을 확인하세요!</p>
             </div>
 
             <?php
@@ -89,12 +89,22 @@
               $result = mysqli_query($conn, $sql);
 
               while($rows = mysqli_fetch_assoc($result)){
-                echo '<div class="inven-group">';
-                echo '<span class="inven-rank">'.$rows['grade'].'</span>';
-                echo '<div class="inven-me-title">';
-                echo '<span>'.$rows['name'].'</span>&nbsp;|&nbsp;<span>'.$rows['exp'].'점</span>';
-                echo '</div>';
-                echo '</div>';
+                echo '<table class="table table-hover">';
+                echo '<thead>';
+                echo '<tr class="view"'>;
+                echo '<th>순위</th>';
+                echo '<th>이름</th>';
+                echo '<th>점수</th>';
+                echo '</tr>';
+                echo '</thead>';
+                echo '<tbody>';
+                echo '<tr>';
+                echo '<td>'.$rows['grade'].'</td>';
+                echo '<td>'.$rows['name'].'</td>';
+                echo '<td>'.$rows['exp'].'</td>';
+                echo '</tr>';
+                echo '</tbody>';
+                echo '</table>'
               }
 
               ?>
