@@ -2,7 +2,7 @@
 
 include('./DB.php');
 
-$mb_id =        trim($_POST['email']);
+$mb_id =   trim($_POST['email']);
 $mb_pwd =  trim($_POST['pwd']);
 
 if(!$mb_id) {

@@ -68,26 +68,16 @@
         <div class="col-sm">
           <h3 class="inven-me-title">현재모습</h3>
         </div>
-        <div class="inven-me">
-          <img
-            class="item-img-me"
-            src="./images/character0.png"
-            id="inven-me-img"
-          />
-          <!-- 화면이 어색해서 이미지 넣어 놓음. 원래라면 inven-list 이하 삭제 -->
+        <div class="inven-me" id="inven-me">
         </div>
         <div id="inven-list">
-          <div class="row">
-            <div class="col-md" onclick="chgItem(0)">
-              <div class="inven-item">
-                <img class="item-img" src="images/character0.png" id="img0" />
-                <div class="inven-item-name">신입생1</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+
+    <?php
+      include('src/inventory_back.php');
+    ?>
 
     <script src="./js/jquery.min.js"></script>
 

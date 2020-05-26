@@ -29,7 +29,6 @@
   </head>
   <body>
     <!-- Navigation -->
-    <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
       <a class="navbar-brand js-scroll-trigger" href="./index.php">첫 등교는 IP로!</a>
@@ -76,8 +75,11 @@
       <div id="inven-list"></div>
     </div>
 
+    <?php
+      include('src/coupon_back.php');
+    ?>
+
     <script src="./js/jquery.min.js"></script>
-    <script src="js/coupon.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="js/bootstrap.bundle.min.js"></script>
 

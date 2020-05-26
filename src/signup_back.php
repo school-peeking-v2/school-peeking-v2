@@ -31,11 +31,18 @@ if(mysqli_num_rows($result) > 0) {
     exit;
 }
 
+
+$sql = "INSERT INTO rank VALUES (0, '$mb_id', 0)";
+$result = mysqli_query($conn, $sql);
+
 $sql = "INSERT INTO member VALUES('$mb_id','$mb_name','$mb_pwd')";
 $result = mysqli_query($conn, $sql);
 
 if($result) {
     $_SESSION['ss_mb_id'] = $mb_id;
+
+    $sql = "INSERT INTO inven VALUES(0,'$mb_id', 0)";
+    $result = mysqli_query($conn, $sql);
     
     echo "<script>alert('회원가입이 완료되었습니다');</script>";
     echo "<script>location.replace('../login.php');</script>";

@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand js-scroll-trigger" href="index.html"
+        <a class="navbar-brand js-scroll-trigger" href="index.php"
           >첫 등교는 IP로!</a
         >
         <button
@@ -40,30 +40,30 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto list-unstyled">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#" id="roadview"
+              <a class="nav-link js-scroll-trigger" href="./roadview.php" id="roadview"
                 >로드뷰</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link js-scroll-trigger"
-                href="./inventory.html"
+                href="./inventory.php"
                 id="inventory"
                 >인벤토리</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="./coupon.html" id="coupon"
+              <a class="nav-link js-scroll-trigger" href="./coupon.php" id="coupon"
                 >인증서</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="./rank.html" id="ranking"
+              <a class="nav-link js-scroll-trigger" href="./rank.php" id="ranking"
                 >랭킹</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#" id="logout"
+              <a class="nav-link js-scroll-trigger" href="src/logout_back.php" id="logout"
                 >로그아웃</a
               >
             </li>
@@ -81,31 +81,23 @@
                 <p class="inven-inst" id="inven-inst">퀴즈의 정답을 맞춘 사람을 확인하세요!</p>
             </div>
 
-            <div class="inven-group">
-                <span class="inven-rank">1</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
-            <div class="inven-group">
-                <span class="inven-rank">2</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
-            <div class="inven-group">
-                <span class="inven-rank">3</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
-            <div class="inven-group">
-                <span class="inven-rank">4</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
+            <?php
 
+              include('src/DB.php');
+
+              $sql = "select (select count(*) from rank where exp >= r.exp) as grade, (select m.name from member as m where m.id = r.id) as name , r.exp from rank as r order by exp desc";
+              $result = mysqli_query($conn, $sql);
+
+              while($rows = mysqli_fetch_assoc($result)){
+                echo '<div class="inven-group">';
+                echo '<span class="inven-rank">'.$rows['grade'].'</span>';
+                echo '<div class="inven-me-title">';
+                echo '<span>'.$rows['name'].'</span>&nbsp;|&nbsp;<span>'.$rows['exp'].'점</span>';
+                echo '</div>';
+                echo '</div>';
+              }
+
+              ?>
 
         </div>
     </div>
