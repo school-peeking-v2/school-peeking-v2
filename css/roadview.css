@@ -145,7 +145,7 @@ body.fullscreen-enabled #fullscreenToggle {
   display: none;
 }
 
-#autorotateToggle {
+#indexToggle {
   display: block;
   position: absolute;
   top: 0;
@@ -157,18 +157,52 @@ body.fullscreen-enabled #fullscreenToggle {
   background-color: rgba(103,115,131,0.8);
 }
 
-.mobile #autorotateToggle {
+#autorotateToggle {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: rgb(103,115,131);
+  background-color: rgba(103,115,131,0.8);
+}
+
+.mobile #indexToggle {
   width: 50px;
   height: 50px;
 }
 
+.mobile #autorotateToggle {
+  width: 50px;
+  height: 50px;
+
+}
+
 /* If there is a fullscreen button, autorotate must placed a bit to the left */
+body.fullscreen-enabled #indexToggle {
+  right: 40px;
+}
+
 body.fullscreen-enabled #autorotateToggle {
   right: 40px;
 }
 
+body.fullscreen-enabled.mobile #indexToggle {
+  right: 50px;
+}
+
 body.fullscreen-enabled.mobile #autorotateToggle {
   right: 50px;
+}
+
+#indexToggle .icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 #autorotateToggle .icon {
@@ -177,6 +211,11 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   right: 5px;
   width: 30px;
   height: 30px;
+}
+
+.mobile #indexToggle .icon {
+  top: 10px;
+  right: 10px;
 }
 
 .mobile #autorotateToggle .icon {
