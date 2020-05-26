@@ -1,12 +1,12 @@
 <?php
-  $mainNav_dp = 'none';
-  $mainNav2_dp = '';
-
   session_start();
 
   if(isset($_SESSION['ss_mb_id'])) {
     $mainNav_dp = '';
     $mainNav2_dp = 'none';
+  } else {
+    $mainNav_dp = 'none';
+    $mainNav2_dp = '';
   }
 ?>
 

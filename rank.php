@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand js-scroll-trigger" href="index.html"
+        <a class="navbar-brand js-scroll-trigger" href="index.php"
           >첫 등교는 IP로!</a
         >
         <button
@@ -40,30 +40,30 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto list-unstyled">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#" id="roadview"
+              <a class="nav-link js-scroll-trigger" href="./roadview.php" id="roadview"
                 >로드뷰</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link js-scroll-trigger"
-                href="./inventory.html"
+                href="./inventory.php"
                 id="inventory"
                 >인벤토리</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="./coupon.html" id="coupon"
+              <a class="nav-link js-scroll-trigger" href="./coupon.php" id="coupon"
                 >인증서</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="./rank.html" id="ranking"
+              <a class="nav-link js-scroll-trigger" href="./rank.php" id="ranking"
                 >랭킹</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#" id="logout"
+              <a class="nav-link js-scroll-trigger" href="src/logout_back.php" id="logout"
                 >로그아웃</a
               >
             </li>
