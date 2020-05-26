@@ -31,6 +31,10 @@ if(mysqli_num_rows($result) > 0) {
     exit;
 }
 
+
+$sql = "INSERT INTO rank VALUES (0, '$mb_id', 0)";
+$result = mysqli_query($conn, $sql);
+
 $sql = "INSERT INTO member VALUES('$mb_id','$mb_name','$mb_pwd')";
 $result = mysqli_query($conn, $sql);
 

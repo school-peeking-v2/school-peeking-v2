@@ -81,31 +81,23 @@
                 <p class="inven-inst" id="inven-inst">퀴즈의 정답을 맞춘 사람을 확인하세요!</p>
             </div>
 
-            <div class="inven-group">
-                <span class="inven-rank">1</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
-            <div class="inven-group">
-                <span class="inven-rank">2</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
-            <div class="inven-group">
-                <span class="inven-rank">3</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
-            <div class="inven-group">
-                <span class="inven-rank">4</span>
-                <div class="inven-me-title">
-                    <span>배주현</span>|<span>10000점</span>
-                </div>
-            </div>
+            <?php
 
+              include('src/DB.php');
+
+              $sql = "select (select count(*) from rank where exp >= r.exp) as grade, (select m.name from member as m where m.id = r.id) as name , r.exp from rank as r order by exp desc";
+              $result = mysqli_query($conn, $sql);
+
+              while($rows = mysqli_fetch_assoc($result)){
+                echo '<div class="inven-group">';
+                echo '<span class="inven-rank">'.$rows['grade'].'</span>';
+                echo '<div class="inven-me-title">';
+                echo '<span>'.$rows['name'].'</span>&nbsp;|&nbsp;<span>'.$rows['exp'].'점</span>';
+                echo '</div>';
+                echo '</div>';
+              }
+
+              ?>
 
         </div>
     </div>
