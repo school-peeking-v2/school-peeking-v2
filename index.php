@@ -77,9 +77,9 @@
                   </div>
         </div>
       </nav>
-      <div class="main" style="display:<?php echo $mainNav2_dp?>;">
+      <div class="main">
         <!-- 로그인 후면 mainNav2 display='none' -->
-        <nav id="mainNav2" class="text-right">
+        <nav id="mainNav2" class="text-right" style="display:<?php echo $mainNav2_dp?>;">
           <div class="container-fluid go">
             <a href="./login.php" id="go_login">로그인/회원가입</a>
           </div>
