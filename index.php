@@ -86,7 +86,7 @@
         </nav>
         <header>
           <!-- <img src="./images/logo.png" alt="첫 등교는 IP로" class="logo"> -->
-          <h1 class="logo">
+          <h1 class="logo" style="text-shadow: #5f5f5f -12px 13px 20px;">
             첫<br />
             등교는<br />
             IP로<br />
