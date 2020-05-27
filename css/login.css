@@ -2,7 +2,7 @@ body {
   font-size: 100%;
   width: 100%;
   height: 0;
-  background: url("../images/mobile-background.png") no-repeat;
+  background: url('../images/mobile-background.png') no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position-y: -50px;
@@ -18,7 +18,7 @@ button:focus {
 }
 
 .view {
-  margin-top: 60px
+  margin-top: 60px;
 }
 
 .logo {
@@ -45,7 +45,7 @@ input {
   margin-bottom: 20px;
 }
 
-input[type="email"] {
+input[type='email'] {
   width: 350px;
   height: 55px;
   padding: 20px;
@@ -55,7 +55,7 @@ input[type="email"] {
   background-color: #d5d5d5;
 }
 
-input[type="password"] {
+input[type='password'] {
   width: 350px;
   height: 55px;
   padding: 20px;
@@ -64,10 +64,10 @@ input[type="password"] {
   border-radius: 50px;
   background-color: #d5d5d5;
   color: black;
-  font-family: "Arial Black";
+  font-family: 'Arial Black';
 }
 
-button[type="submit"] {
+button[type='submit'] {
   width: 250px;
   height: 80px;
 
@@ -92,12 +92,12 @@ button[type="submit"] {
   color: red;
 }
 
-@media all and (min-width:768px) and (max-width:1024px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 100%;
     width: 100%;
     height: 0;
-    background: url("../images/mobile-background.png") no-repeat;
+    background: url('../images/mobile-background.png') no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position-y: -250px;
@@ -139,7 +139,7 @@ button[type="submit"] {
     margin-bottom: 20px;
   }
 
-  input[type="email"] {
+  input[type='email'] {
     width: 350px;
     height: 55px;
     padding: 20px;
@@ -149,7 +149,7 @@ button[type="submit"] {
     background-color: #d5d5d5;
   }
 
-  input[type="password"] {
+  input[type='password'] {
     width: 350px;
     height: 55px;
     padding: 20px;
@@ -158,10 +158,10 @@ button[type="submit"] {
     border-radius: 50px;
     background-color: #d5d5d5;
     color: black;
-    font-family: "Arial Black";
+    font-family: 'Arial Black';
   }
 
-  button[type="submit"] {
+  button[type='submit'] {
     width: 250px;
     height: 80px;
 
@@ -187,12 +187,12 @@ button[type="submit"] {
   }
 }
 
-@media all and (min-width:1025px) {
+@media all and (min-width: 1025px) {
   body {
     font-size: 100%;
     width: 100%;
     height: 0;
-    background: url("../images/background.png") no-repeat;
+    background: url('../images/background.png') no-repeat;
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
@@ -236,7 +236,7 @@ button[type="submit"] {
     margin-bottom: 20px;
   }
 
-  input[type="email"] {
+  input[type='email'] {
     width: 350px;
     height: 55px;
     padding: 20px;
@@ -246,7 +246,7 @@ button[type="submit"] {
     background-color: #d5d5d5;
   }
 
-  input[type="password"] {
+  input[type='password'] {
     width: 350px;
     height: 55px;
     padding: 20px;
@@ -255,10 +255,10 @@ button[type="submit"] {
     border-radius: 50px;
     background-color: #d5d5d5;
     color: black;
-    font-family: "Arial Black";
+    font-family: 'Arial Black';
   }
 
-  button[type="submit"] {
+  button[type='submit'] {
     width: 250px;
     height: 80px;
 

@@ -81,33 +81,36 @@
                 <p class="inven-inst" id="inven-inst">퀴즈 전체 랭킹을 확인하세요!</p>
             </div>
 
+            <table class="table table-hover">
+                <thead>
+                <tr class="view">
+                <th>순위</th>
+                <th>이름</th>
+                <th>점수</th>
+                </tr>
+                </thead>
+                <tbody>
             <?php
 
               include('src/DB.php');
 
-              $sql = "select (select count(*) from rank where exp >= r.exp) as grade, (select m.name from member as m where m.id = r.id) as name , r.exp from rank as r order by exp desc";
+              $sql = "select (select count(*)+1 from rank where exp > r.exp) as grade, (select m.name from member as m where m.id = r.id) as name , r.exp from rank as r order by exp desc";
               $result = mysqli_query($conn, $sql);
 
               while($rows = mysqli_fetch_assoc($result)){
-                echo '<table class="table table-hover">';
-                echo '<thead>';
-                echo '<tr class="view"'>;
-                echo '<th>순위</th>';
-                echo '<th>이름</th>';
-                echo '<th>점수</th>';
-                echo '</tr>';
-                echo '</thead>';
-                echo '<tbody>';
+                
+                
                 echo '<tr>';
                 echo '<td>'.$rows['grade'].'</td>';
                 echo '<td>'.$rows['name'].'</td>';
                 echo '<td>'.$rows['exp'].'</td>';
                 echo '</tr>';
-                echo '</tbody>';
-                echo '</table>'
+                
               }
 
               ?>
+              </tbody>
+              </table>
 
         </div>
     </div>
