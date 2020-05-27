@@ -47,8 +47,8 @@
         <div class="login">
             <form action="src/login_back.php" onsubmit="return login_submit(this);" method="post">
                 <input type="email" name="email" id="email" placeholder="이메일" /><br/>
-                <input type="password" placeholder="비밀번호"><br/>
-                <button type="submit" id="btn_login">로그인</button>
+                <input type="password" name="pwd" id="pwd" placeholder="비밀번호" /><br/>
+                <button type="submit" name id="btn_login">로그인</button>
             </form>
         </div>
         <div class="join">
@@ -56,23 +56,23 @@
             <a href="./signup.php" class="click_join"><b>지금 가입하러 가기</b></a>
         </div>
     </div>
-
-    <script>
-        function login_submit(f) {
-            if(!f.email.value) {
-                alert("이메일을 입력하세요");
-                f.email.focus();
-                return false;
-            }
-
-            if(f.pwd.value.length < 4) {
-                if(!f.pwd.value) alert("비밀번호를 입력하세요");
-                else alert("비밀번호는 4글자 이상입니다. 다시 입력하세요.");
-                f.pwd.value = null;
-                f.pwd.focus();
-                return false;
-            }
-        }
-    </script>
   </body>
 </html>
+
+<script>
+    function login_submit(f) {
+        if(!f.email.value) {
+            alert("이메일을 입력하세요");
+            f.email.focus();
+            return false;
+        }
+
+        if(f.pwd.value.length < 4) {
+            if(!f.pwd.value) alert("비밀번호를 입력하세요");
+            else alert("비밀번호는 4글자 이상입니다. 다시 입력하세요.");
+            f.pwd.value = null;
+            f.pwd.focus();
+            return false;
+        }
+    }
+</script>
